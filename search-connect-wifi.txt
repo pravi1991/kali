@@ -1,0 +1,52 @@
+=================================
+= Connect to wifi from terminal =
+=================================
+
+To search available network cards
+---------------------------------
+# iwconfig
+eth0      no wireless extensions.
+
+lo        no wireless extensions.
+
+wlan0     IEEE 802.11  ESSID:off/any  
+          Mode:Managed  Access Point: Not-Associated   Tx-Power=15 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Encryption key:off
+          Power Management:off
+
+---------------------------------------------------------------------------------------------------
+Make device up
+--------------
+# ifconfig wlan0 up
+
+---------------------------------------------------------------------------------------------------
+To search available networkss...
+--------------------------------
+# nmcli dev wifi
+IN-USE  SSID             MODE   CHAN  RATE        SIGNAL  BARS  SECURITY  
+        Harsha pg 403    Infra  7     270 Mbit/s  100     ▂▄▆█  WPA1 WPA2 
+        Harish04         Infra  8     270 Mbit/s  89      ▂▄▆█  WPA1 WPA2 
+        Harshapg04       Infra  11    270 Mbit/s  74      ▂▄▆_  WPA1 WPA2 
+        Gillys 5F        Infra  3     130 Mbit/s  55      ▂▄__  WPA1 WPA2 
+        Harsha 5F        Infra  1     270 Mbit/s  52      ▂▄__  WPA1 WPA2 
+        Deepakkrishna    Infra  1     135 Mbit/s  52      ▂▄__  WPA1 WPA2 
+        Gillys 4F        Infra  1     130 Mbit/s  52      ▂▄__  WPA1 WPA2 
+        D-Link_DIR-600M  Infra  1     135 Mbit/s  40      ▂▄__  WPA1 WPA2 
+        TP-LINK_7FBA     Infra  1     270 Mbit/s  20      ▂___  WPA2     
+
+---------------------------------------------------------------------------------------------------
+Set ssid and password
+---------------------
+# nmcli dev wifi connect "<ssid>" password "<password>"
+
+---------------------------------------------------------------------------------------------------
+
+**************************************************************************************************
+JUST incase use the below to get ip
+
+Get ip address from dhcp
+------------------------
+# dhclient wlan0
+
+---------------------------------------------------------------------------------------------------
