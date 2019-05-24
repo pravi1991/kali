@@ -1,0 +1,6 @@
+To set the timezone run the following command in debian
+
+sudo dpkg-reconfigure tzdata
+
+Remember: the zone is always Asia, not Indian Ocean.
+In Asia select only Kolkata
